@@ -30,6 +30,14 @@ public class Shop {
         this.instruments.addAll(instruments);
     }
 
+    public void addSheetMusic(ArrayList<SheetMusic> sheetMusics){
+        this.sheetMusics.addAll(sheetMusics);
+    }
+
+    public void addInstrumentAccessories(ArrayList<InstrumentAccessory> instrumentAccessories){
+        this.instrumentAccessories.addAll(instrumentAccessories);
+    }
+
     public ArrayList<ISell> getInventory() {
         ArrayList<ISell> inventory = new ArrayList<>();
         inventory.addAll(instruments);

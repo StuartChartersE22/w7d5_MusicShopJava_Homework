@@ -59,4 +59,16 @@ public class ShopTest {
         assertEquals(2, shop.getInventory().size());
     }
 
+    @Test
+    public void addSheetMusic(){
+        shop.addSheetMusic(sheetMusics);
+        assertEquals(1, shop.getInventory().size());
+    }
+
+    @Test
+    public void addInstrumentAccessories(){
+        shop.addInstrumentAccessories(instrumentAccessories);
+        assertEquals(2, shop.getInventory().size());
+    }
+
 }
