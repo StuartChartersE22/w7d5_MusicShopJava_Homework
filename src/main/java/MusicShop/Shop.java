@@ -93,7 +93,7 @@ public class Shop {
         return item;
     }
 
-    public <I extends ISell> void addAnItemAlreadyOnStockList(I item){
+    public void addAnItemAlreadyOnStockList(ISell item){
         if(instruments.keySet().contains(item)){increaseStockOfItem(item, instruments);}
         if(instrumentAccessories.keySet().contains(item)){increaseStockOfItem(item, instrumentAccessories);}
         if(sheetMusics.keySet().contains(item)){increaseStockOfItem(item, sheetMusics);}
