@@ -5,20 +5,20 @@ import MusicShop.Instruments.Instrument;
 import MusicShop.InstumentAccessories.InstrumentAccessory;
 
 import java.util.ArrayList;
-import java.util.BitSet;
+import java.util.HashMap;
 
 public class Shop {
 
     private String name;
-    private ArrayList<Instrument> instruments;
-    private ArrayList<InstrumentAccessory> instrumentAccessories;
-    private ArrayList<SheetMusic> sheetMusics;
+    private HashMap<Instrument, Integer> instruments;
+    private HashMap<InstrumentAccessory, Integer> instrumentAccessories;
+    private HashMap<SheetMusic, Integer> sheetMusics;
 
     public Shop(String name){
         this.name = name;
-        instruments = new ArrayList<>();
-        instrumentAccessories = new ArrayList<>();
-        sheetMusics = new ArrayList<>();
+        instruments = new HashMap<>();
+        instrumentAccessories = new HashMap<>();
+        sheetMusics = new HashMap<>();
     }
 
 
@@ -26,23 +26,23 @@ public class Shop {
         return this.name;
     }
 
-    public void addInstruments(ArrayList<Instrument> instruments){
-        this.instruments.addAll(instruments);
+    public void addInstruments(HashMap<Instrument, Integer> instruments){
+        this.instruments.putAll(instruments);
     }
 
-    public void addSheetMusic(ArrayList<SheetMusic> sheetMusics){
-        this.sheetMusics.addAll(sheetMusics);
+    public void addSheetMusic(HashMap<SheetMusic, Integer> sheetMusics){
+        this.sheetMusics.putAll(sheetMusics);
     }
 
-    public void addInstrumentAccessories(ArrayList<InstrumentAccessory> instrumentAccessories){
-        this.instrumentAccessories.addAll(instrumentAccessories);
+    public void addInstrumentAccessories(HashMap<InstrumentAccessory, Integer> instrumentAccessories){
+        this.instrumentAccessories.putAll(instrumentAccessories);
     }
 
-    public ArrayList<ISell> getInventory() {
-        ArrayList<ISell> inventory = new ArrayList<>();
-        inventory.addAll(instruments);
-        inventory.addAll(instrumentAccessories);
-        inventory.addAll(sheetMusics);
+    public HashMap<ISell, Integer> getInventory() {
+        HashMap<ISell, Integer> inventory = new HashMap<>();
+        inventory.putAll(instruments);
+        inventory.putAll(instrumentAccessories);
+        inventory.putAll(sheetMusics);
         return inventory;
     }
 }
