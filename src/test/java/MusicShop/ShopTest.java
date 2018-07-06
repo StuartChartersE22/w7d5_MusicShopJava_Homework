@@ -72,4 +72,12 @@ public class ShopTest {
         assertEquals(2, shop.getInventory().size());
     }
 
+    @Test
+    public void getPotentialProfit(){
+        shop.addInstrumentAccessories(instrumentAccessories);
+        shop.addSheetMusic(sheetMusics);
+        shop.addInstruments(instruments);
+        assertEquals(470.00, shop.getPotentialProfit(), 0.001);
+    }
+
 }

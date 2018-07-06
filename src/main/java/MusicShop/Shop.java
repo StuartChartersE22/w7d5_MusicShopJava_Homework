@@ -6,6 +6,7 @@ import MusicShop.InstumentAccessories.InstrumentAccessory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 public class Shop {
 
@@ -44,5 +45,22 @@ public class Shop {
         inventory.putAll(instrumentAccessories);
         inventory.putAll(sheetMusics);
         return inventory;
+    }
+
+    private <I extends ISell> double profitOfTypeOfStock(HashMap<I, Integer> typeOfStock){
+        double profitOfTypeOfStock = 0;
+        for(I item : typeOfStock.keySet()){
+            int numberOfItem = typeOfStock.get(item);
+            profitOfTypeOfStock += item.calculateMarkup() * numberOfItem;
+        }
+        return profitOfTypeOfStock;
+    }
+
+    public double getPotentialProfit() {
+        double totalPotentialProfit = 0;
+        totalPotentialProfit += profitOfTypeOfStock(instruments);
+        totalPotentialProfit += profitOfTypeOfStock(instrumentAccessories);
+        totalPotentialProfit += profitOfTypeOfStock(sheetMusics);
+        return totalPotentialProfit;
     }
 }
