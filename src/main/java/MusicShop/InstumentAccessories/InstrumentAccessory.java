@@ -6,13 +6,13 @@ import MusicShop.Instruments.InstrumentType;
 
 import java.util.ArrayList;
 
-public abstract class InstrumentAccessories implements ISell {
+public abstract class InstrumentAccessory implements ISell {
 
     private double suppliersPrice;
     private double retailPrice;
     private ArrayList<Instrument> usedWith;
 
-    public InstrumentAccessories(double suppliersPrice, double retailPrice, ArrayList<Instrument> usedWith){
+    public InstrumentAccessory(double suppliersPrice, double retailPrice, ArrayList<Instrument> usedWith){
         this.suppliersPrice = suppliersPrice;
         this.retailPrice = retailPrice;
         this.usedWith = usedWith;

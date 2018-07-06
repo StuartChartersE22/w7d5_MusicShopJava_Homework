@@ -1,15 +1,17 @@
 package MusicShop;
 
+import MusicShop.Behaviours.ISell;
 import MusicShop.Instruments.Instrument;
-import MusicShop.InstumentAccessories.InstrumentAccessories;
+import MusicShop.InstumentAccessories.InstrumentAccessory;
 
 import java.util.ArrayList;
+import java.util.BitSet;
 
 public class Shop {
 
     private String name;
     private ArrayList<Instrument> instruments;
-    private ArrayList<InstrumentAccessories> instrumentAccessories;
+    private ArrayList<InstrumentAccessory> instrumentAccessories;
     private ArrayList<SheetMusic> sheetMusics;
 
     public Shop(String name){
@@ -22,5 +24,17 @@ public class Shop {
 
     public String getName() {
         return this.name;
+    }
+
+    public void addInstruments(ArrayList<Instrument> instruments){
+        this.instruments.addAll(instruments);
+    }
+
+    public ArrayList<ISell> getInventory() {
+        ArrayList<ISell> inventory = new ArrayList<>();
+        inventory.addAll(instruments);
+        inventory.addAll(instrumentAccessories);
+        inventory.addAll(sheetMusics);
+        return inventory;
     }
 }
