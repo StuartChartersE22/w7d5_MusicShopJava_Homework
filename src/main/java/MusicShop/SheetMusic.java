@@ -9,7 +9,7 @@ public class SheetMusic implements ISell{
     private double suppliersPrice;
     private double retailPrice;
 
-    public SheetMusic(double suppliersPrice, double retailPrice) {
+    public SheetMusic(String name, double suppliersPrice, double retailPrice) {
         this.suppliersPrice = suppliersPrice;
         this.retailPrice = retailPrice;
     }
