@@ -80,4 +80,12 @@ public class ShopTest {
         assertEquals(470.00, shop.getPotentialProfit(), 0.001);
     }
 
+    @Test
+    public void removeAnItem(){
+        shop.addInstruments(instruments);
+        assertEquals(drum, shop.removeItem(drum));
+        int stockOfDrums = shop.getInventory().get(drum);
+        assertEquals(2, stockOfDrums);
+    }
+
 }
