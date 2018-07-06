@@ -4,9 +4,7 @@ import MusicShop.Behaviours.ISell;
 import MusicShop.Instruments.Instrument;
 import MusicShop.InstumentAccessories.InstrumentAccessory;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Set;
 
 public class Shop {
 
