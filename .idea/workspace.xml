@@ -25,8 +25,8 @@
       <file leaf-file-name="ShopTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/MusicShop/ShopTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="85" column="57" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+            <state relative-caret-position="379">
+              <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,8 +37,8 @@
       <file leaf-file-name="Shop.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Shop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+            <state relative-caret-position="347">
+              <caret line="95" column="59" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#630#631#0" expanded="true" />
@@ -682,12 +682,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ShopTest_addInstruments - 2018.07.06 at 13h 55m 26s.xml">
-      <configuration name="ShopTest.addInstruments" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShopTest - 2018.07.06 at 13h 56m 08s.xml">
-      <configuration name="ShopTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_MusicShopExchange_test - 2018.07.06 at 13h 56m 20s.xml">
       <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
     </history-entry>
@@ -712,6 +706,12 @@
     <history-entry file="All_in_MusicShopExchange_test - 2018.07.06 at 15h 29m 00s.xml">
       <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_MusicShopExchange_test - 2018.07.06 at 16h 23m 16s.xml">
+      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_MusicShopExchange_test - 2018.07.06 at 16h 23m 39s.xml">
+      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -725,12 +725,12 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32965517" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32965517" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32965517" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32965517" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info anchor="bottom" id="Build" weight="0.27724138" />
       <window_info anchor="right" id="Gradle" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -963,8 +963,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Shop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+        <state relative-caret-position="347">
+          <caret line="95" column="59" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#630#631#0" expanded="true" />
@@ -979,8 +979,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MusicShop/ShopTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="85" column="57" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+        <state relative-caret-position="379">
+          <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

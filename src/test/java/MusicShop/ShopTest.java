@@ -88,4 +88,12 @@ public class ShopTest {
         assertEquals(2, stockOfDrums);
     }
 
+    @Test
+    public void addItemAlreadyOnStockList(){
+        shop.addInstruments(instruments);
+        shop.addAnItemAlreadyOnStockList(drum);
+        int stockOfDrums = shop.getInventory().get(drum);
+        assertEquals(4, stockOfDrums);
+    }
+
 }

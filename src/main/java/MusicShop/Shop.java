@@ -77,11 +77,25 @@ public class Shop {
         }
     }
 
+    private <I extends ISell> void increaseStockOfItem(ISell item, HashMap<I, Integer> inventoryOfItem){
+        for(I itemType : inventoryOfItem.keySet()){
+            if(item == itemType){
+                inventoryOfItem.put(itemType, inventoryOfItem.get(itemType) + 1);
+            }
+        }
+    }
+
     public <I extends ISell> I removeItem(I item){
         if(!isInStock(item)){return null;}
         if(instruments.keySet().contains(item)){decreaseStockOfItem(item, instruments);}
         if(instrumentAccessories.keySet().contains(item)){decreaseStockOfItem(item, instrumentAccessories);}
         if(sheetMusics.keySet().contains(item)){decreaseStockOfItem(item, sheetMusics);}
         return item;
+    }
+
+    public <I extends ISell> void addAnItemAlreadyOnStockList(I item){
+        if(instruments.keySet().contains(item)){increaseStockOfItem(item, instruments);}
+        if(instrumentAccessories.keySet().contains(item)){increaseStockOfItem(item, instrumentAccessories);}
+        if(sheetMusics.keySet().contains(item)){increaseStockOfItem(item, sheetMusics);}
     }
 }
