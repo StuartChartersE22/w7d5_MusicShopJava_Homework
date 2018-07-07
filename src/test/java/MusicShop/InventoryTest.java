@@ -51,19 +51,19 @@ public class InventoryTest {
     @Test
     public void addInstruments(){
         inventory.addInstruments(instruments);
-        assertEquals(2, inventory.getTotalInventory().size());
+        assertEquals(2, inventory.getAllInventory().size());
     }
 
     @Test
     public void addSheetMusic(){
         inventory.addSheetMusic(sheetMusics);
-        assertEquals(1, inventory.getTotalInventory().size());
+        assertEquals(1, inventory.getAllInventory().size());
     }
 
     @Test
     public void addInstrumentAccessories(){
         inventory.addInstrumentAccessories(instrumentAccessories);
-        assertEquals(2, inventory.getTotalInventory().size());
+        assertEquals(2, inventory.getAllInventory().size());
     }
 
     @Test
@@ -78,7 +78,7 @@ public class InventoryTest {
     public void removeAnItem(){
         inventory.addInstruments(instruments);
         assertEquals(drum, inventory.removeItem(drum));
-        int stockOfDrums = inventory.getTotalInventory().get(drum);
+        int stockOfDrums = inventory.getAllInventory().get(drum);
         assertEquals(2, stockOfDrums);
     }
 
@@ -86,7 +86,7 @@ public class InventoryTest {
     public void addItemAlreadyOnStockList(){
         inventory.addInstruments(instruments);
         inventory.addAnItemAlreadyOnStockList(drum);
-        int stockOfDrums = inventory.getTotalInventory().get(drum);
+        int stockOfDrums = inventory.getAllInventory().get(drum);
         assertEquals(4, stockOfDrums);
     }
 }

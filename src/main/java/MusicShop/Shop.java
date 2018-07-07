@@ -1,5 +1,8 @@
 package MusicShop;
 
+import MusicShop.Behaviours.ISell;
+import MusicShop.Instruments.Instances.Guitar;
+
 public class Shop {
 
     private String name;
@@ -31,5 +34,11 @@ public class Shop {
 
     public void decreaseTill(double amount) {
         this.till -= amount;
+    }
+
+    public <I extends ISell> I sell(I item) {
+        if(inventory.removeItem(item) == null){return null;}
+        this.till += item.getRetailPrice();
+        return item;
     }
 }

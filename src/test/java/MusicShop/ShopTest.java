@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class ShopTest {
 
@@ -38,7 +39,7 @@ public class ShopTest {
         guitar = new Guitar(10.00, 15.00);
         drum = new Drum(10.00, 15.00);
         instruments.put(guitar, 10);
-        instruments.put(drum, 3);
+        instruments.put(drum, 0);
 
         drumStickCompatibleInstruments.add(drum);
         guitarStringCompatibleInstruments.add(guitar);
@@ -80,6 +81,22 @@ public class ShopTest {
     public void decreaseTill(){
         shop.decreaseTill(20.50);
         assertEquals(479.50, shop.getTill(), 0.001);
+    }
+
+    @Test
+    public void sellAnItem(){
+        assertEquals(guitar, shop.sell(guitar));
+        int numberOfGuitars = shop.getInventory().getAllInventory().get(guitar);
+        assertEquals(9, numberOfGuitars);
+        assertEquals(515.00, shop.getTill(), 0.001);
+    }
+
+    @Test
+    public void cantSellAnItemThatIsntInStock(){
+        assertNull(shop.sell(drum));
+        int numberOfDrums = shop.getInventory().getAllInventory().get(drum);
+        assertEquals(0, numberOfDrums);
+        assertEquals(500.00, shop.getTill(), 0.001);
     }
 
 }

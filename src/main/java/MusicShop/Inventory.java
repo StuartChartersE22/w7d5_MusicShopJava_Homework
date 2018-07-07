@@ -31,7 +31,7 @@ public class Inventory {
         this.instrumentAccessories.putAll(instrumentAccessories);
     }
 
-    public HashMap<ISell, Integer> getTotalInventory(){
+    public HashMap<ISell, Integer> getAllInventory(){
         HashMap<ISell, Integer> totalInventory = new HashMap<>();
         totalInventory.putAll(instruments);
         totalInventory.putAll(instrumentAccessories);
@@ -57,7 +57,7 @@ public class Inventory {
     }
 
     public boolean isInStock(ISell item){
-        if(getTotalInventory().keySet().contains(item) && getTotalInventory().get(item) != 0){
+        if(getAllInventory().keySet().contains(item) && getAllInventory().get(item) != 0){
             return true;
         }
         return false;
