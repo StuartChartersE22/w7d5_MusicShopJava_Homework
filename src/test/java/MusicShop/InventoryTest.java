@@ -14,9 +14,8 @@ import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
 
-public class ShopTest {
+public class InventoryTest {
 
-    private Shop shop;
     private Inventory inventory;
     private Drum drum;
     private Guitar guitar;
@@ -28,7 +27,6 @@ public class ShopTest {
     private HashMap<Instrument, Integer> instruments = new HashMap<>();
     private HashMap<InstrumentAccessory, Integer> instrumentAccessories = new HashMap<>();
     private HashMap<SheetMusic, Integer> sheetMusics = new HashMap<>();
-
 
     @Before
     public void before(){
@@ -48,21 +46,47 @@ public class ShopTest {
         instrumentAccessories.put(guitarString, 10);
 
         inventory = new Inventory();
+    }
+
+    @Test
+    public void addInstruments(){
+        inventory.addInstruments(instruments);
+        assertEquals(2, inventory.getTotalInventory().size());
+    }
+
+    @Test
+    public void addSheetMusic(){
+        inventory.addSheetMusic(sheetMusics);
+        assertEquals(1, inventory.getTotalInventory().size());
+    }
+
+    @Test
+    public void addInstrumentAccessories(){
+        inventory.addInstrumentAccessories(instrumentAccessories);
+        assertEquals(2, inventory.getTotalInventory().size());
+    }
+
+    @Test
+    public void getPotentialProfit(){
         inventory.addInstrumentAccessories(instrumentAccessories);
         inventory.addSheetMusic(sheetMusics);
         inventory.addInstruments(instruments);
-
-        shop = new Shop("Music", inventory);
+        assertEquals(470.00, inventory.getPotentialProfit(), 0.001);
     }
 
     @Test
-    public void getName(){
-        assertEquals("Music", shop.getName());
+    public void removeAnItem(){
+        inventory.addInstruments(instruments);
+        assertEquals(drum, inventory.removeItem(drum));
+        int stockOfDrums = inventory.getTotalInventory().get(drum);
+        assertEquals(2, stockOfDrums);
     }
 
     @Test
-    public void getInventory(){
-        assertEquals(inventory, shop.getInventory());
+    public void addItemAlreadyOnStockList(){
+        inventory.addInstruments(instruments);
+        inventory.addAnItemAlreadyOnStockList(drum);
+        int stockOfDrums = inventory.getTotalInventory().get(drum);
+        assertEquals(4, stockOfDrums);
     }
-
 }
