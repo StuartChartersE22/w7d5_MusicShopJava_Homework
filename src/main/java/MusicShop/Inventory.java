@@ -1,6 +1,7 @@
 package MusicShop;
 
 import MusicShop.Behaviours.ISell;
+import MusicShop.Behaviours.NotInStockException;
 import MusicShop.Instruments.Instrument;
 import MusicShop.InstumentAccessories.InstrumentAccessory;
 
@@ -79,15 +80,19 @@ public class Inventory {
         }
     }
 
-    public <I extends ISell> I removeItem(I item){
-        if(!isInStock(item)){return null;}
+    public <I extends ISell> I removeItem(I item) throws NotInStockException {
+        if(!isInStock(item)){throw new NotInStockException(item);
+        }
         if(instruments.keySet().contains(item)){decreaseStockOfItem(item, instruments);}
         if(instrumentAccessories.keySet().contains(item)){decreaseStockOfItem(item, instrumentAccessories);}
         if(sheetMusics.keySet().contains(item)){decreaseStockOfItem(item, sheetMusics);}
         return item;
     }
 
-    public void addAnItemAlreadyOnStockList(ISell item){
+    public void addAnItemAlreadyOnStockList(ISell item) throws NotInStockException {
+        if(!getAllInventory().keySet().contains(item)){
+            throw new NotInStockException(item);
+        }
         if(instruments.keySet().contains(item)){increaseStockOfItem(item, instruments);}
         if(instrumentAccessories.keySet().contains(item)){increaseStockOfItem(item, instrumentAccessories);}
         if(sheetMusics.keySet().contains(item)){increaseStockOfItem(item, sheetMusics);}

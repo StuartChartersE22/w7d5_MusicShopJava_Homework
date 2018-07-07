@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f0ac2df-b176-497c-a0ff-6e437faffedb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/ISell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/ISell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/NotInStockException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MusicShop/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MusicShop/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MusicShop/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MusicShop/Shop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/MusicShop/InventoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/MusicShop/InventoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/MusicShop/ShopTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/MusicShop/ShopTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MusicShop/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MusicShop/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MusicShop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MusicShop/Shop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MusicShop/InventoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MusicShop/InventoryTest.java" afterDir="false" />
@@ -25,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ShopTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShopTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/MusicShop/ShopTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-491">
-              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+            <state relative-caret-position="113">
+              <caret line="85" column="9" lean-forward="true" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2194#2195#0" expanded="true" />
@@ -41,11 +46,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="InventoryTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MusicShop/InventoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="80" column="55" lean-forward="true" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Shop.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Shop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+            <state relative-caret-position="305">
+              <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#630#631#0" expanded="true" />
@@ -63,11 +80,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="NotInStockException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/NotInStockException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+              <folding>
+                <element signature="e#160#161#0" expanded="true" />
+                <element signature="e#179#180#0" expanded="true" />
+                <element signature="e#217#218#0" expanded="true" />
+                <element signature="e#243#244#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Inventory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Inventory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-838">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="244">
+              <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,8 +151,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -438,12 +470,13 @@
         <option value="$PROJECT_DIR$/src/test/java/MusicShop/InstumentAccessories/Instances/DrumStickTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/MusicShop/SheetMusic.java" />
         <option value="$PROJECT_DIR$/src/test/java/MusicShop/SheetMusicTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MusicShop/Inventory.java" />
-        <option value="$PROJECT_DIR$/src/test/java/MusicShop/InventoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/IBalance.java" />
         <option value="$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/ISell.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/NotInStockException.java" />
         <option value="$PROJECT_DIR$/src/main/java/MusicShop/Shop.java" />
         <option value="$PROJECT_DIR$/src/test/java/MusicShop/ShopTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MusicShop/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MusicShop/InventoryTest.java" />
       </list>
     </option>
   </component>
@@ -745,27 +778,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_MusicShopExchange_test - 2018.07.06 at 16h 23m 16s.xml">
-      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MusicShopExchange_test - 2018.07.06 at 16h 23m 39s.xml">
-      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MusicShopExchange_test - 2018.07.06 at 16h 30m 48s.xml">
-      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MusicShopExchange_test - 2018.07.06 at 16h 34m 05s.xml">
-      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 12h 00m 35s.xml">
-      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 12h 19m 44s.xml">
-      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 12h 23m 18s.xml">
-      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 12h 24m 55s.xml">
       <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
     </history-entry>
@@ -773,6 +785,27 @@
       <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 12h 41m 59s.xml">
+      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 12h 43m 54s.xml">
+      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 12h 45m 59s.xml">
+      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 13h 41m 10s.xml">
+      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 13h 41m 35s.xml">
+      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 13h 41m 43s.xml">
+      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 13h 46m 43s.xml">
+      <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_MusicShopExchange_test - 2018.07.07 at 13h 49m 07s.xml">
       <configuration name="All in MusicShopExchange_test" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -993,20 +1026,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MusicShop/InventoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/IBalance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/ISell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1034,27 +1064,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/ISell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-838">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Shop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        <state relative-caret-position="305">
+          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#630#631#0" expanded="true" />
@@ -1073,14 +1086,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MusicShop/ShopTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-491">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+        <state relative-caret-position="113">
+          <caret line="85" column="9" lean-forward="true" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2194#2195#0" expanded="true" />
             <element signature="e#2224#2225#0" expanded="true" />
             <element signature="e#2292#2293#0" expanded="true" />
             <element signature="e#2322#2323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MusicShop/Behaviours/NotInStockException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#160#161#0" expanded="true" />
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#243#244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MusicShop/InventoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="80" column="55" lean-forward="true" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

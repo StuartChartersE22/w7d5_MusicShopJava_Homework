@@ -1,7 +1,7 @@
 package MusicShop;
 
 import MusicShop.Behaviours.ISell;
-import MusicShop.Instruments.Instances.Guitar;
+import MusicShop.Behaviours.NotInStockException;
 
 public class Shop {
 
@@ -36,8 +36,8 @@ public class Shop {
         this.till -= amount;
     }
 
-    public <I extends ISell> I sell(I item) {
-        if(inventory.removeItem(item) == null){return null;}
+    public <I extends ISell> I sell(I item) throws NotInStockException {
+        inventory.removeItem(item);
         this.till += item.getRetailPrice();
         return item;
     }

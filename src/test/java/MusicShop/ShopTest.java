@@ -1,5 +1,6 @@
 package MusicShop;
 
+import MusicShop.Behaviours.NotInStockException;
 import MusicShop.Instruments.Instances.Drum;
 import MusicShop.Instruments.Instances.Guitar;
 import MusicShop.Instruments.Instrument;
@@ -46,7 +47,6 @@ public class ShopTest {
         drumStick = new DrumStick(2.00, 7.00, drumStickCompatibleInstruments);
         guitarString = new GuitarString(2.00, 7.00, guitarStringCompatibleInstruments);
         instrumentAccessories.put(drumStick, 25);
-        instrumentAccessories.put(guitarString, 10);
 
         inventory = new Inventory();
         inventory.addInstrumentAccessories(instrumentAccessories);
@@ -84,19 +84,21 @@ public class ShopTest {
     }
 
     @Test
-    public void sellAnItem(){
+    public void sellAnItem() throws NotInStockException {
         assertEquals(guitar, shop.sell(guitar));
         int numberOfGuitars = shop.getInventory().getAllInventory().get(guitar);
         assertEquals(9, numberOfGuitars);
         assertEquals(515.00, shop.getTill(), 0.001);
     }
 
-    @Test
-    public void cantSellAnItemThatIsntInStock(){
-        assertNull(shop.sell(drum));
-        int numberOfDrums = shop.getInventory().getAllInventory().get(drum);
-        assertEquals(0, numberOfDrums);
-        assertEquals(500.00, shop.getTill(), 0.001);
+    @Test(expected = NotInStockException.class)
+    public void cantSellAnItemThatIsntInStock() throws NotInStockException {
+        shop.sell(drum);
+    }
+
+    @Test (expected = NotInStockException.class)
+    public void cantSellAnItemThatIsntOnTheInventoryList() throws NotInStockException {
+        shop.sell(guitarString);
     }
 
 }

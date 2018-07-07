@@ -1,5 +1,6 @@
 package MusicShop;
 
+import MusicShop.Behaviours.NotInStockException;
 import MusicShop.Instruments.Instances.Drum;
 import MusicShop.Instruments.Instances.Guitar;
 import MusicShop.Instruments.Instrument;
@@ -75,18 +76,29 @@ public class InventoryTest {
     }
 
     @Test
-    public void removeAnItem(){
+    public void removeAnItem() throws NotInStockException {
         inventory.addInstruments(instruments);
         assertEquals(drum, inventory.removeItem(drum));
         int stockOfDrums = inventory.getAllInventory().get(drum);
         assertEquals(2, stockOfDrums);
     }
 
+    @Test(expected = NotInStockException.class)
+    public void cantRemoveAnItemThatIsntInStock() throws NotInStockException {
+        inventory.removeItem(guitar);
+    }
+
     @Test
-    public void addItemAlreadyOnStockList(){
+    public void addItemAlreadyOnStockList() throws NotInStockException {
         inventory.addInstruments(instruments);
         inventory.addAnItemAlreadyOnStockList(drum);
         int stockOfDrums = inventory.getAllInventory().get(drum);
         assertEquals(4, stockOfDrums);
+    }
+
+    @Test(expected = NotInStockException.class)
+    public void cantAddItemIfNotOnStockList() throws NotInStockException {
+        inventory.addInstruments(instruments);
+        inventory.addAnItemAlreadyOnStockList(guitarString);
     }
 }
