@@ -52,7 +52,7 @@ public class ShopTest {
         inventory.addSheetMusic(sheetMusics);
         inventory.addInstruments(instruments);
 
-        shop = new Shop("Music", inventory);
+        shop = new Shop("Music", inventory, 500.00);
     }
 
     @Test
@@ -63,6 +63,23 @@ public class ShopTest {
     @Test
     public void getInventory(){
         assertEquals(inventory, shop.getInventory());
+    }
+
+    @Test
+    public void getTill(){
+        assertEquals(500.00, shop.getTill(), 0.001);
+    }
+
+    @Test
+    public void increaseTill(){
+        shop.increaseTill(20.50);
+        assertEquals(520.50, shop.getTill(), 0.001);
+    }
+
+    @Test
+    public void decreaseTill(){
+        shop.decreaseTill(20.50);
+        assertEquals(479.50, shop.getTill(), 0.001);
     }
 
 }
